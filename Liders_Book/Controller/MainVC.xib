@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Liders_Book" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="jv9-5H-gGs" id="gLd-sY-KRR"/>
+                <outlet property="segmentedControll" destination="lTB-7N-DFI" id="izd-Lm-6d7"/>
+                <outlet property="table_view" destination="j6r-MQ-Kng" id="Cuz-zp-Fhr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jv9-5H-gGs">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="lTB-7N-DFI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                            <segments>
+                                <segment title="So'nggi o'qilgan sahifa"/>
+                                <segment title="Tanlanganlar jumlalar"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentControllPressed:" destination="-1" eventType="valueChanged" id="pWX-Bc-CjQ"/>
+                            </connections>
+                        </segmentedControl>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-MQ-Kng">
+                            <rect key="frame" x="0.0" y="51" width="414" height="801"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95336598159999997" green="0.93795841930000001" blue="0.89606982469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lTB-7N-DFI" secondAttribute="trailing" id="8ka-EZ-rZu"/>
+                        <constraint firstAttribute="trailing" secondItem="j6r-MQ-Kng" secondAttribute="trailing" id="H7b-Sn-LB8"/>
+                        <constraint firstAttribute="bottom" secondItem="j6r-MQ-Kng" secondAttribute="bottom" id="IKH-jf-VEb"/>
+                        <constraint firstItem="j6r-MQ-Kng" firstAttribute="top" secondItem="lTB-7N-DFI" secondAttribute="bottom" constant="20" id="KAO-Ex-h3v"/>
+                        <constraint firstItem="lTB-7N-DFI" firstAttribute="top" secondItem="jv9-5H-gGs" secondAttribute="top" id="Mey-l2-1pt"/>
+                        <constraint firstItem="lTB-7N-DFI" firstAttribute="leading" secondItem="jv9-5H-gGs" secondAttribute="leading" id="jZZ-x9-3nM"/>
+                        <constraint firstItem="j6r-MQ-Kng" firstAttribute="leading" secondItem="jv9-5H-gGs" secondAttribute="leading" id="zot-iU-Rtx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95337706799999999" green="0.9380270839" blue="0.89197546240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jv9-5H-gGs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0mT-GM-gOe"/>
+                <constraint firstItem="jv9-5H-gGs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JT4-kX-5Xx"/>
+                <constraint firstAttribute="trailing" secondItem="jv9-5H-gGs" secondAttribute="trailing" id="O7o-9e-np0"/>
+                <constraint firstAttribute="bottom" secondItem="jv9-5H-gGs" secondAttribute="bottom" id="gJo-xG-Nx2"/>
+            </constraints>
+            <point key="canvasLocation" x="-159.42028985507247" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationVC" customModule="Liders_Book" customModuleProvider="target">
+            <connections>
+                <outlet property="fullName" destination="l3G-Xb-VMa" id="WkH-UK-Xwn"/>
+                <outlet property="logInBtn" destination="Pcd-uL-sdq" id="F3R-zf-BrA"/>
+                <outlet property="otp" destination="X88-kc-L3v" id="ql9-YU-44W"/>
+                <outlet property="phoneNumber" destination="hUJ-u9-DbD" id="uai-oM-bLs"/>
+                <outlet property="registerLbl" destination="T84-DK-WGg" id="SQb-ye-xgg"/>
+                <outlet property="sendBtn" destination="GEM-vu-KNQ" id="fjo-fK-zHv"/>
+                <outlet property="stacksSpacing" destination="NgT-vV-Hci" id="AeR-jm-96Q"/>
+                <outlet property="surname" destination="dad-xL-JBx" id="k3r-Af-D3F"/>
+                <outlet property="textFieldHeight" destination="4Q3-Kf-1Ue" id="CiA-us-mKQ"/>
+                <outlet property="textFieldStackView" destination="nel-sM-CeI" id="w8Q-HL-oeM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T84-DK-WGg">
+                    <rect key="frame" x="146.5" y="148" width="121" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nel-sM-CeI">
+                    <rect key="frame" x="25" y="236.5" width="364" height="383"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUJ-u9-DbD" customClass="PulBackTF" customModule="Liders_Book" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="364" height="81"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3G-Xb-VMa" customClass="PulBackTF" customModule="Liders_Book" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="101" width="364" height="80.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dad-xL-JBx" customClass="PulBackTF" customModule="Liders_Book" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="201.5" width="364" height="80.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X88-kc-L3v" customClass="PulBackTF" customModule="Liders_Book" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="302" width="364" height="81"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iRB-ii-QVv">
+                    <rect key="frame" x="25" y="659.5" width="364" height="107.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEM-vu-KNQ">
+                            <rect key="frame" x="0.0" y="0.0" width="364" height="53.5"/>
+                            <color key="backgroundColor" red="0.11625915019999999" green="0.45317375659999998" blue="0.83524394040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="SEND">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sendBtnPressed:" destination="-1" eventType="touchUpInside" id="ZAz-HS-eLv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcd-uL-sdq">
+                            <rect key="frame" x="0.0" y="53.5" width="364" height="54"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Log in">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="logInBtnPressed:" destination="-1" eventType="touchUpInside" id="8VO-UI-IFd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95336598159999997" green="0.93795841930000001" blue="0.89606982469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hUJ-u9-DbD" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.09" id="4Q3-Kf-1Ue"/>
+                <constraint firstItem="T84-DK-WGg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4gf-fo-9Bq"/>
+                <constraint firstItem="nel-sM-CeI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="5Rw-78-gxy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nel-sM-CeI" secondAttribute="trailing" constant="25" id="IwO-Sv-arG"/>
+                <constraint firstItem="iRB-ii-QVv" firstAttribute="top" secondItem="nel-sM-CeI" secondAttribute="bottom" constant="40" id="NgT-vV-Hci"/>
+                <constraint firstItem="GEM-vu-KNQ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="RVb-ss-oOc"/>
+                <constraint firstItem="nel-sM-CeI" firstAttribute="top" secondItem="T84-DK-WGg" secondAttribute="bottom" constant="50" id="ZC3-Y6-5u9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iRB-ii-QVv" secondAttribute="trailing" constant="25" id="e3v-1i-PmF"/>
+                <constraint firstItem="iRB-ii-QVv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="kc7-Ex-zSO"/>
+                <constraint firstItem="nel-sM-CeI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="qx6-cW-Mue"/>
+            </constraints>
+            <point key="canvasLocation" x="255" y="136"/>
+        </view>
+    </objects>
+</document>

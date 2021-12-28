@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageVC" customModule="Liders_Book" customModuleProvider="target">
+            <connections>
+                <outlet property="animation" destination="RQN-6L-BGN" id="fAy-Xs-v4r"/>
+                <outlet property="languageTF" destination="30T-Md-aOm" id="U5s-y0-2hu"/>
+                <outlet property="selectLanguageLbl" destination="dw0-Nd-ByB" id="84V-Te-oeZ"/>
+                <outlet property="selectionBtn" destination="srm-Ba-cWo" id="IsV-Ct-Bvw"/>
+                <outlet property="view" destination="YdR-5n-3kv" id="gbs-m8-LkI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="YdR-5n-3kv">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LidersBook" translatesAutoresizingMaskIntoConstraints="NO" id="n3g-xH-cDZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHc-U8-chP">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tn6-63-cFF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LidersBook" translatesAutoresizingMaskIntoConstraints="NO" id="54W-bb-tmW">
+                                <rect key="frame" x="124" y="75" width="166" height="251"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hRa-TA-ljk">
+                                <rect key="frame" x="30" y="402" width="354" height="118.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select language" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30T-Md-aOm">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srm-Ba-cWo">
+                                        <rect key="frame" x="0.0" y="69" width="354" height="49.5"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Tanlash">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionBtnPressed:" destination="-1" eventType="touchUpInside" id="etS-12-LP4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tilni tanlang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw0-Nd-ByB">
+                                <rect key="frame" x="35" y="380" width="78.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQN-6L-BGN" customClass="AnimationView">
+                                <rect key="frame" x="0.0" y="269" width="414" height="358"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="6615-loader-animation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hRa-TA-ljk" firstAttribute="leading" secondItem="tn6-63-cFF" secondAttribute="leading" constant="30" id="0YO-sZ-P6S"/>
+                            <constraint firstItem="54W-bb-tmW" firstAttribute="height" secondItem="tn6-63-cFF" secondAttribute="height" multiplier="0.28" id="49f-nu-aHT"/>
+                            <constraint firstAttribute="trailing" secondItem="hRa-TA-ljk" secondAttribute="trailing" constant="30" id="4dP-Wa-K1D"/>
+                            <constraint firstItem="hRa-TA-ljk" firstAttribute="top" secondItem="dw0-Nd-ByB" secondAttribute="bottom" constant="5" id="5Yc-yT-3RY"/>
+                            <constraint firstItem="54W-bb-tmW" firstAttribute="width" secondItem="tn6-63-cFF" secondAttribute="width" multiplier="0.4" id="INd-9e-4YU"/>
+                            <constraint firstItem="srm-Ba-cWo" firstAttribute="height" secondItem="tn6-63-cFF" secondAttribute="height" multiplier="0.055" id="ORe-Lv-IS0"/>
+                            <constraint firstAttribute="trailing" secondItem="RQN-6L-BGN" secondAttribute="trailing" id="QuI-EN-wnx"/>
+                            <constraint firstItem="hRa-TA-ljk" firstAttribute="top" secondItem="54W-bb-tmW" secondAttribute="bottom" constant="76" id="YC7-kc-PkM"/>
+                            <constraint firstItem="dw0-Nd-ByB" firstAttribute="leading" secondItem="tn6-63-cFF" secondAttribute="leading" constant="35" id="lXd-Rh-r38"/>
+                            <constraint firstItem="54W-bb-tmW" firstAttribute="centerX" secondItem="tn6-63-cFF" secondAttribute="centerX" id="nkQ-im-UMQ"/>
+                            <constraint firstItem="54W-bb-tmW" firstAttribute="top" secondItem="tn6-63-cFF" secondAttribute="top" constant="75" id="o7E-KD-Tao"/>
+                            <constraint firstItem="RQN-6L-BGN" firstAttribute="centerY" secondItem="tn6-63-cFF" secondAttribute="centerY" id="tl6-v9-d0A"/>
+                            <constraint firstItem="RQN-6L-BGN" firstAttribute="leading" secondItem="tn6-63-cFF" secondAttribute="leading" id="wym-wE-C2e"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="systemUltraThinMaterialDark"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2zQ-n7-HRu"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2zQ-n7-HRu" firstAttribute="trailing" secondItem="WHc-U8-chP" secondAttribute="trailing" id="5Yn-pZ-NJO"/>
+                <constraint firstItem="n3g-xH-cDZ" firstAttribute="leading" secondItem="2zQ-n7-HRu" secondAttribute="leading" id="DI1-pU-Z0g"/>
+                <constraint firstItem="2zQ-n7-HRu" firstAttribute="trailing" secondItem="n3g-xH-cDZ" secondAttribute="trailing" id="IZB-5i-Sfj"/>
+                <constraint firstItem="n3g-xH-cDZ" firstAttribute="top" secondItem="YdR-5n-3kv" secondAttribute="top" id="V2q-1I-nCc"/>
+                <constraint firstItem="RQN-6L-BGN" firstAttribute="height" secondItem="YdR-5n-3kv" secondAttribute="height" multiplier="0.4" id="o2Z-uR-Mpg"/>
+                <constraint firstAttribute="bottom" secondItem="WHc-U8-chP" secondAttribute="bottom" id="pYl-x3-skM"/>
+                <constraint firstItem="WHc-U8-chP" firstAttribute="top" secondItem="YdR-5n-3kv" secondAttribute="top" id="sGW-ck-gw8"/>
+                <constraint firstItem="WHc-U8-chP" firstAttribute="leading" secondItem="2zQ-n7-HRu" secondAttribute="leading" id="y8o-Cd-Gbc"/>
+                <constraint firstAttribute="bottom" secondItem="n3g-xH-cDZ" secondAttribute="bottom" id="zo2-ZD-Blq"/>
+            </constraints>
+            <point key="canvasLocation" x="-159.42028985507247" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LidersBook" width="375" height="497"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

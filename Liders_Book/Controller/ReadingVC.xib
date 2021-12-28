@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadingVC" customModule="Liders_Book" customModuleProvider="target">
+            <connections>
+                <outlet property="readingBackView" destination="mJS-5E-rdr" id="7Kq-xl-IXH"/>
+                <outlet property="readingBtn" destination="oad-vA-MWt" id="JCo-3N-gI9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZE-pH-Kgu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LidersBook" translatesAutoresizingMaskIntoConstraints="NO" id="yet-YF-Dpk">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yet-YF-Dpk" secondAttribute="trailing" id="3MP-JV-BVs"/>
+                        <constraint firstItem="yet-YF-Dpk" firstAttribute="top" secondItem="KZE-pH-Kgu" secondAttribute="top" id="3ej-u9-2tT"/>
+                        <constraint firstAttribute="bottom" secondItem="yet-YF-Dpk" secondAttribute="bottom" id="6xA-kL-mDR"/>
+                        <constraint firstItem="yet-YF-Dpk" firstAttribute="leading" secondItem="KZE-pH-Kgu" secondAttribute="leading" id="esy-vk-iY6"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-5E-rdr">
+                    <rect key="frame" x="40" y="303" width="295" height="46"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9TM-ps-vq9">
+                            <rect key="frame" x="70.5" y="7" width="154.5" height="32"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-C2-nzw">
+                                    <rect key="frame" x="0.0" y="4.5" width="32.5" height="23"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" backgroundImage="book">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="booksBtnPressed:" destination="-1" eventType="touchUpInside" id="mVw-ZQ-8DA"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oad-vA-MWt">
+                                    <rect key="frame" x="52.5" y="0.0" width="102" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Kitobni o'qish">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="readingBtnPressed:" destination="-1" eventType="touchUpInside" id="v8t-mz-LxY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10017243770000001" green="0.4617185593" blue="0.82713586090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="9TM-ps-vq9" firstAttribute="centerY" secondItem="mJS-5E-rdr" secondAttribute="centerY" id="SuC-cX-1i7"/>
+                        <constraint firstItem="9TM-ps-vq9" firstAttribute="centerX" secondItem="mJS-5E-rdr" secondAttribute="centerX" id="vQv-Tx-M8B"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ch-Gz-og2">
+                    <rect key="frame" x="0.0" y="349" width="375" height="318"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Rd7-li-fo6">
+                            <rect key="frame" x="0.0" y="15" width="375" height="478"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Muallfi haqida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahx-Jr-jB6">
+                                    <rect key="frame" x="125" y="0.0" width="125.5" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Yc5-O8-3Sa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cy-iO-xUE">
+                                    <rect key="frame" x="4.5" y="36" width="366.5" height="142.5"/>
+                                    <string key="text">Отабек Хасанов, Давлат хизматларини ривожлантириш агентлиги бошқарма бошлиғи
+Мактаб, институт ва ишда кадрга учта нарса ўргатилади. Бу билим, тарбия ва кўникма. Бу уччала тушунчанинг ўргатиш даври ва ўрни бўлиши керак. </string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Kitob nima haqida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-pj-6Y2">
+                                    <rect key="frame" x="107" y="194.5" width="161.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUk-p6-t6h">
+                                    <rect key="frame" x="0.0" y="234.5" width="375" height="243.5"/>
+                                    <string key="text">Ушбу нашрда жуда кўп янги ғоялар, ҳаётга теран назар билан қараш, ғолибликка интилиш, саодат ва комиллик учун дадил қадам ташлаш, жасурлик ва мардлик каби инсоний  фазилатларни ўзида шакллантириш, Ватан ривожига, унинг иқтисодини юксалтиришга астойдил киришиш, ақл-заковатни, илмни ҳар қандай ишдан устун қўйиш каби ҳолатлар мавжуд бўлган. Унутманг, Лидер дегани, аввало ўз устида ишлайдиган ва ўзгаларга ёрдам қўлини чўзадиган инсондир.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Rd7-li-fo6" firstAttribute="width" secondItem="3ch-Gz-og2" secondAttribute="width" id="0Io-Ei-G1K"/>
+                        <constraint firstItem="Rd7-li-fo6" firstAttribute="top" secondItem="3ch-Gz-og2" secondAttribute="top" constant="15" id="EZ9-IX-0Fe"/>
+                        <constraint firstAttribute="trailing" secondItem="Rd7-li-fo6" secondAttribute="trailing" id="RKJ-zZ-elu"/>
+                        <constraint firstAttribute="bottom" secondItem="Rd7-li-fo6" secondAttribute="bottom" id="T1b-TT-m84"/>
+                        <constraint firstItem="Rd7-li-fo6" firstAttribute="leading" secondItem="3ch-Gz-og2" secondAttribute="leading" id="XUI-4M-xLR"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KZE-pH-Kgu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Jc-BM-yvi"/>
+                <constraint firstItem="KZE-pH-Kgu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8fR-Ho-bmi"/>
+                <constraint firstItem="mJS-5E-rdr" firstAttribute="top" secondItem="KZE-pH-Kgu" secondAttribute="bottom" constant="3" id="Oas-UJ-YPQ"/>
+                <constraint firstItem="mJS-5E-rdr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0683945" id="XaR-90-KUA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3ch-Gz-og2" secondAttribute="trailing" id="fDx-z2-ShK"/>
+                <constraint firstItem="mJS-5E-rdr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="gfm-BG-afk"/>
+                <constraint firstItem="3ch-Gz-og2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gjV-M6-LW5"/>
+                <constraint firstAttribute="trailing" secondItem="KZE-pH-Kgu" secondAttribute="trailing" id="hRZ-Xx-ge0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJS-5E-rdr" secondAttribute="trailing" constant="40" id="llZ-ct-AaG"/>
+                <constraint firstItem="3ch-Gz-og2" firstAttribute="top" secondItem="mJS-5E-rdr" secondAttribute="bottom" id="reD-sB-x9A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3ch-Gz-og2" secondAttribute="bottom" id="x7u-Qt-se0"/>
+                <constraint firstItem="KZE-pH-Kgu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.45" id="zTU-KI-2Tv"/>
+            </constraints>
+            <point key="canvasLocation" x="-168.80000000000001" y="127.28635682158921"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LidersBook" width="375" height="497"/>
+        <image name="book" width="32.5" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

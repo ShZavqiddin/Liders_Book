@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="Liders_Book" customModuleProvider="target">
+            <connections>
+                <outlet property="btnHeight" destination="XEk-0n-fqu" id="suv-72-ak6"/>
+                <outlet property="entryLbl" destination="rLK-Ge-6Ha" id="Ica-Dx-j4e"/>
+                <outlet property="phoneNumber" destination="pxi-MT-CBA" id="C0r-hZ-4nk"/>
+                <outlet property="registerBtn" destination="Mhr-MB-Cgt" id="guN-aY-kf5"/>
+                <outlet property="signInBtn" destination="LdR-GI-dEB" id="CRg-TN-6HM"/>
+                <outlet property="stackTopHeight" destination="RXL-5d-KGG" id="CjI-3m-Npt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LidersBook" translatesAutoresizingMaskIntoConstraints="NO" id="80V-6q-wZU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-NX-70q">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fCF-0v-N7a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LidersBook" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-Jd-rxt">
+                                <rect key="frame" x="124" y="75" width="166" height="251"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-z5-flQ">
+                                <rect key="frame" x="30" y="402" width="354" height="113.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxi-MT-CBA" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-GI-dEB">
+                                        <rect key="frame" x="0.0" y="64" width="354" height="49.5"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Kirish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInBtnPressed:" destination="-1" eventType="touchUpInside" id="P5c-jd-Jqt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon raqamingizni kiriting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLK-Ge-6Ha">
+                                <rect key="frame" x="35" y="377.5" width="203" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhr-MB-Cgt">
+                                <rect key="frame" x="68" y="537.5" width="278" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Profilingiz bormi? ">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Registratsiyadan o'tish">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="registrationBtnPressed:" destination="-1" eventType="touchUpInside" id="yvH-rU-nZt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Npf-Jd-rxt" firstAttribute="height" secondItem="fCF-0v-N7a" secondAttribute="height" multiplier="0.28" id="67z-G4-sbc"/>
+                            <constraint firstAttribute="trailing" secondItem="d3l-z5-flQ" secondAttribute="trailing" constant="30" id="8Jk-RF-9Am"/>
+                            <constraint firstItem="Npf-Jd-rxt" firstAttribute="centerX" secondItem="fCF-0v-N7a" secondAttribute="centerX" id="FBB-uF-7NJ"/>
+                            <constraint firstItem="d3l-z5-flQ" firstAttribute="top" secondItem="rLK-Ge-6Ha" secondAttribute="bottom" constant="5" id="KLz-UP-sHO"/>
+                            <constraint firstItem="Npf-Jd-rxt" firstAttribute="width" secondItem="fCF-0v-N7a" secondAttribute="width" multiplier="0.4" id="NPN-9V-OdN"/>
+                            <constraint firstItem="Npf-Jd-rxt" firstAttribute="top" secondItem="fCF-0v-N7a" secondAttribute="top" constant="75" id="ROn-ps-9gE"/>
+                            <constraint firstItem="d3l-z5-flQ" firstAttribute="top" secondItem="Npf-Jd-rxt" secondAttribute="bottom" constant="76" id="RXL-5d-KGG"/>
+                            <constraint firstItem="LdR-GI-dEB" firstAttribute="height" secondItem="fCF-0v-N7a" secondAttribute="height" multiplier="0.055" id="XEk-0n-fqu"/>
+                            <constraint firstItem="Mhr-MB-Cgt" firstAttribute="centerX" secondItem="fCF-0v-N7a" secondAttribute="centerX" id="hCx-9u-bSC"/>
+                            <constraint firstItem="d3l-z5-flQ" firstAttribute="leading" secondItem="fCF-0v-N7a" secondAttribute="leading" constant="30" id="iLd-IB-UDU"/>
+                            <constraint firstItem="Mhr-MB-Cgt" firstAttribute="top" secondItem="d3l-z5-flQ" secondAttribute="bottom" constant="22" id="mih-Dr-1Zu"/>
+                            <constraint firstItem="rLK-Ge-6Ha" firstAttribute="leading" secondItem="fCF-0v-N7a" secondAttribute="leading" constant="35" id="wOJ-mE-PIn"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="systemUltraThinMaterialDark"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ogy-NX-70q" secondAttribute="trailing" id="KVc-cE-LWq"/>
+                <constraint firstAttribute="bottom" secondItem="80V-6q-wZU" secondAttribute="bottom" id="PSY-zL-XTo"/>
+                <constraint firstItem="Ogy-NX-70q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dr0-Mf-N9q"/>
+                <constraint firstItem="Ogy-NX-70q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="euX-wd-dEv"/>
+                <constraint firstItem="80V-6q-wZU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lhn-xc-OyO"/>
+                <constraint firstItem="80V-6q-wZU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nvI-bb-n0d"/>
+                <constraint firstAttribute="bottom" secondItem="Ogy-NX-70q" secondAttribute="bottom" id="tII-4B-Lgo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="80V-6q-wZU" secondAttribute="trailing" id="wGr-TF-DDf"/>
+            </constraints>
+            <point key="canvasLocation" x="-159.42028985507247" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LidersBook" width="375" height="497"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
